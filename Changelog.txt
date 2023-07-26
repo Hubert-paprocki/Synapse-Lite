@@ -1,0 +1,3 @@
+' Script Version History:
+' V1.1 - Improved code, app runs as an administrator.
+' V1.0 - First working script.
