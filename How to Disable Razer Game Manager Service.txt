@@ -1,0 +1,40 @@
+What does RGMS do?
+Since I didn't make the service I can't be 100% sure. But from the name and previous post, I suggest that it is looking for games you're playing in order to use that information in Razer Synapse. If you want to use any functionality that requires game-info within Razer Synapse don't disable the service.
+
+How to disable RGMS
+What you want to do is disable RGM-Service. However, at first, you won't be able to due to the fact that Razer Synapse Service is dependent on RGMS.
+
+Thus we are going to remove the dependency:
+Hit windows-key+R and type in "regedit". Afterward, press enter.
+
+Navigate to "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Razer Synapse Service"
+
+Remove "Razer Game Manager Service" from "DependendOnService" by double-clicking it and then removing that name.
+
+(You might have to restart in order for the changes to take effect)
+
+Now go into services and disable RGMS:
+Hit windows-key+R and type in "services.msc". Afterward, press enter.
+
+Find "Razer Game Manager"
+
+Right-click and then click on "settings"
+
+Change "start type" to "disabled"
+
+Also, hit "stop"
+
+
+
+(Sorry if some translations of settings are incorrect. My windows is not set to English. If you spot any errors, mention it in a comment and I will correct them)
+
+Edit:
+Once Synapse installs an update you will be greated with a screen saying something like "start failed".
+
+The (shortened) reason behind this is that the dependency that was removed in this tutorial is placed back into the registry for some reason.
+
+To fix this problem, re-do the above step named: "Thus we are going to remove the dependency".
+
+Afterwards restart your system and everything should be back to normal.
+
+Credit: Keyinator - https://www.reddit.com/user/Keyinator/
